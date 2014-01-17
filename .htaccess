@@ -1,0 +1,3 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteRule ^nouveau_joueur$  /pingpong/?page=50_nouveau_joueur.php [L]
