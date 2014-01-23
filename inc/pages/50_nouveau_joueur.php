@@ -44,7 +44,7 @@
 		$joueur_list_html .= "<a href=''>";
 		//ucwords met en majuscule les premières lettres de chaque mot
 		$joueur_list_html .= ucwords($value['pseudo']);
-		$joueur_list_html .= "</a>\n\t\t\t\t";
+		$joueur_list_html .= "</a>";
 		$joueur_list_html .= " - \n\t\t\t\t";
 		//formulaire de suppresion
 		$joueur_list_html .= '<form action="" method="post" class="solo">' . "\n\t\t\t\t\t";
