@@ -40,20 +40,20 @@
 	foreach($array as $key => $value)	{
 		//formatga
 		$joueur_list_html .= "\t\t\t";
-		$joueur_list_html .= "<li>";
+		$joueur_list_html .= "<li>\n\t\t\t\t";
 		$joueur_list_html .= "<a href=''>";
 		//ucwords met en majuscule les premières lettres de chaque mot
 		$joueur_list_html .= ucwords($value['pseudo']);
-		$joueur_list_html .= "</a>";
-		$joueur_list_html .= " - ";
+		$joueur_list_html .= "</a>\n\t\t\t\t";
+		$joueur_list_html .= " - \n\t\t\t\t";
 		//formulaire de suppresion
-		$joueur_list_html .= '<form action="" method="post" class="solo">';
+		$joueur_list_html .= '<form action="" method="post" class="solo">' . "\n\t\t\t\t\t";
 		//input chaché avec l'id du joueur
-		$joueur_list_html .= '<input type="hidden" name="id_sup_joueur" value="' . $value['id'] . '">';
+		$joueur_list_html .= '<input type="hidden" name="id_sup_joueur" value="' . $value['id'] . '">' . "\n\t\t\t\t\t";
 		//boutton de suppression
-		$joueur_list_html .= '<input type="submit" value="supprimer" name="supprimer_joueur">';
+		$joueur_list_html .= '<input type="submit" value="supprimer" name="supprimer_joueur">' . "\n\t\t\t\t";
 		//fin formulaire de suppression
-		$joueur_list_html .= '</form>';
+		$joueur_list_html .= '</form>' . "\n\t\t\t";
 		$joueur_list_html .= "</li>\n";
 	}
 	$joueur_list_html = "\t\t<ul>\n" . $joueur_list_html . "\t\t</ul>";
