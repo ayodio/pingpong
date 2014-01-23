@@ -47,7 +47,7 @@
 		$joueur_list_html .= "</a>";
 		$joueur_list_html .= " - ";
 		//formulaire de suppresion
-		$joueur_list_html .= '<form action="" method="post">';
+		$joueur_list_html .= '<form action="" method="post" class="solo">';
 		//input chaché avec l'id du joueur
 		$joueur_list_html .= '<input type="hidden" name="id_sup_joueur" value="' . $value['id'] . '">';
 		//boutton de suppression
