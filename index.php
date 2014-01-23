@@ -1,4 +1,5 @@
 <?php 
+	include 'inc/lib.php';
 	include 'inc/header.php'; 
 	echo "\n";
 	include 'inc/connect.php'; 
