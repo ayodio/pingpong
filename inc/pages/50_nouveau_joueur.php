@@ -21,6 +21,11 @@
 			//executer la requete
 			mysql_query($sql);
 		}
+		elseif(isset($_POST['supprimer_joueur']))	{
+			//$requete pour supprimer le joueur
+			$sql = "DELETE FROM joueurs WHERE id =" . $_POST['id_sup_joueur'];
+			mysql_query($sql);
+		}
 	}
 	
 	//Liste des joueurs
@@ -37,12 +42,18 @@
 		$joueur_list_html .= "\t\t\t";
 		$joueur_list_html .= "<li>";
 		$joueur_list_html .= "<a href=''>";
+		//ucwords met en majuscule les premières lettres de chaque mot
 		$joueur_list_html .= ucwords($value['pseudo']);
 		$joueur_list_html .= "</a>";
 		$joueur_list_html .= " - ";
-		$joueur_list_html .= "<a href=''>";
-		$joueur_list_html .= "supprimer";
-		$joueur_list_html .= "</a>";
+		//formulaire de suppresion
+		$joueur_list_html .= '<form action="" method="post">';
+		//input chaché avec l'id du joueur
+		$joueur_list_html .= '<input type="hidden" name="id_sup_joueur" value="' . $value['id'] . '">';
+		//boutton de suppression
+		$joueur_list_html .= '<input type="submit" value="supprimer" name="supprimer_joueur">';
+		//fin formulaire de suppression
+		$joueur_list_html .= '</form>';
 		$joueur_list_html .= "</li>\n";
 	}
 	$joueur_list_html = "\t\t<ul>\n" . $joueur_list_html . "\t\t</ul>";
