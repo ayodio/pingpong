@@ -23,16 +23,18 @@
 	for($i = 0; $i <= 4; $i++)	{
 		$code_match .= "<tr>";
 		$code_match .= "<td>";
-		$code_match .= '<input type="radio" name="set' . $i . '" value="Antoine">';
+		$code_match .= '<input type="radio" name="set' . $i . '" value="Joueur1">';
 		$code_match .= "</td>";
 		$code_match .= "<td>";
-		$code_match .= '<input type="radio" name="set' . $i . '" value="Arthur">';
+		$code_match .= '<input type="radio" name="set' . $i . '" value="Joueur2">';
 		$code_match .= "</td>";
 		$code_match .= "</tr>";
 	}
 	//ajout de la ligne de selection des joueurs
 	$code_match = "<tr><td>" . $joueur_sel . "</td><td>" . $joueur_sel . "</td></tr>" . $code_match;
-	$code_match = "<table>" . $code_match . "</table>";
+	//ajout de la ligne de validation du match
+	$code_match .= '<tr><td COLSPAN="2" class="match_submit"><input type="submit"></td></tr>';
+	$code_match = "<table border>" . $code_match . "</table>";
 	
 	echo htmLawed($code_match, array('tidy'=>4))
 ?>

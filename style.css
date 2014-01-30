@@ -21,3 +21,9 @@ pre	{
 form.solo	{
 	display:inline;
 }
+td.match_submit	{
+	text-align:center;
+}
+table	{
+	border:solid, 1px, #000;
+}
