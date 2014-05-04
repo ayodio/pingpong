@@ -16,7 +16,7 @@
 			//mettre le texte du lien à afficher dans un tableau
 			$menu_links[substr($value, 0, 2)]['name'] = str_replace("_", " ", substr($value, 3, -4));
 			//mettre la valeur du lien dans un tableau
-			$menu_links[substr($value, 0, 2)]['link'] = substr($value, 3, -4);
+			$menu_links[substr($value, 0, 2)]['link'] = '?page=' . $value;
 		}
 	}
 	//pour chaque entré du tableau menu_links créer un élément de liste avec un lien
